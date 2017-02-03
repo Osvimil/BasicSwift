@@ -14,14 +14,17 @@ import UIKit
 
 for i in 0...100{
     
+    if i % 2 == 0{
+        print("\(i). par")
+    }
+    if !(i % 2 ==  0){
+        print("\(i). Impar")
+    }
     if i % 5 == 0{
-        print("\(i). bingo")
-    } else if i % 2 == 0{
-        print("\(i). soy par")
-    } else if !(i % 2 == 0){
-        print("\(i). soy impar")
-    } else if i >= 30 && i <= 40{
-        print("\(i). viva upiicsa")
+        print("\(i). multiplo cinco")
+    }
+    if i >= 30 && i <= 40{
+        print("\(i). Upiicsa")
     }
 }
 

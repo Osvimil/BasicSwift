@@ -33,6 +33,20 @@ class Libro : Producto{
     
     var seccion = Seccion()
     let añoPublicacion : Int
+    var FormatoDigital : Bool?
+    var paginas = 1000
+    var palabrasPagina = 70
+    
+    var numeroPalabras: Int{
+        
+        get{
+        return paginas * palabrasPagina
+            }
+        set{
+            paginas = newValue
+            palabrasPagina = newValue / 100
+        }
+    }
     
     init(marca: String, precio: Double, añoPublicacion: Int){
         self.añoPublicacion = añoPublicacion
@@ -57,6 +71,21 @@ NaranjaMecanica.marca
 NaranjaMecanica.precio
 NaranjaMecanica.seccion
 NaranjaMecanica.añoPublicacion
+NaranjaMecanica.numeroPalabras
+
+NaranjaMecanica.numeroPalabras
+
+NaranjaMecanica.FormatoDigital = true
+
+if let digitalForm = NaranjaMecanica.FormatoDigital{
+    if digitalForm{
+        print("tambien es digital")
+    }else{
+        print("I dont know anything")
+    }
+}
+
+
 
 NaranjaMecanica.realizarDescuento(porcentaje: 17)
 
